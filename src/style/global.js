@@ -11,7 +11,7 @@ export default createGlobalStyle`
         background: #ffffff;
     }
 
-    body, input, button {
+    body, input, button, select {
         font-family: 'PT Serif', serif;
     }
 

@@ -7,7 +7,7 @@ export const Container = styled.div`
   border: 2px solid #d3d3d3;
   margin-bottom: 15px;
 
-  input {
+  select {
     margin: 0;
     padding: 5px;
     font-size: 16px;
