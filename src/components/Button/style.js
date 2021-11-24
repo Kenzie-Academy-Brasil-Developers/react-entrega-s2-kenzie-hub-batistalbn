@@ -10,8 +10,4 @@ export const Container = styled.button`
   line-height: 28px;
   background: ${(props) => (props.colorSchema ? "#d3d3d3" : "#403CAa")};
   color: ${(props) => (props.colorSchema ? "#808080" : "#fff")};
-
-  :hover {
-    border: 2px solid #d2691e;
-  }
 `;

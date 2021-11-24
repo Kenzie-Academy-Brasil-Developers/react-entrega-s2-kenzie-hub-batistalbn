@@ -1,7 +1,10 @@
 import Button from "../../components/Button";
 import Input from "../../components/Input";
-import { Container, Form } from "./style";
+import { Text } from "./style";
+import { Form } from "../../style/form";
 import { useHistory } from "react-router-dom";
+import Header from "../../components/Header";
+import LayoutContainer from "../../components/LayoutContainer";
 
 const Home = () => {
   const history = useHistory();
@@ -11,20 +14,18 @@ const Home = () => {
   };
 
   return (
-    <Container>
-      <h2>
-        Kenzie <span>Hub</span>
-      </h2>
+    <LayoutContainer>
+      <Header />
       <Form>
         <Input placeholder="Login" />
         <Input placeholder="Senha" type="password" />
         <Button text="Logar" />
-        <div>
+        <Text>
           <p>
             Cria uma Página para mostrar suas
-            <span> habilidades metas e progresso.</span>
+            <span> habilidades, metas e progresso.</span>
           </p>
-        </div>
+        </Text>
 
         <Button
           onClick={() => navigation("/signup")}
@@ -32,7 +33,7 @@ const Home = () => {
           text="Cadastrar"
         />
       </Form>
-    </Container>
+    </LayoutContainer>
   );
 };
 
