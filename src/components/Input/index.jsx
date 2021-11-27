@@ -1,10 +1,16 @@
-import { Container } from "./style";
+import { Container, Label } from "./style";
 
-const Input = ({ placeholder, type }) => {
+const Input = ({ label, placeholder, type, register, error, name }) => {
   return (
-    <Container>
-      <input placeholder={placeholder} type={type} />
-    </Container>
+    <div>
+      <Label isErrored={!!error}>
+        <label>{label}</label>
+        {!!error && <span> - {error}</span>}
+      </Label>
+      <Container isErrored={!!error}>
+        <input placeholder={placeholder} type={type} {...register(name)} />
+      </Container>
+    </div>
   );
 };
 
