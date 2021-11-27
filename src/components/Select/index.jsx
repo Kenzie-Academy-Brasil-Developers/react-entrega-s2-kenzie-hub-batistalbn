@@ -1,6 +1,6 @@
 import { Container, Label } from "./style";
 
-const Input = ({ label, placeholder, type, register, error, name }) => {
+const Select = ({ children, label, register, name, error, placeholder }) => {
   return (
     <div>
       <Label isErrored={!!error}>
@@ -8,10 +8,12 @@ const Input = ({ label, placeholder, type, register, error, name }) => {
         {!!error && <span> - {error}</span>}
       </Label>
       <Container isErrored={!!error}>
-        <input placeholder={placeholder} type={type} {...register(name)} />
+        <select placeholder={placeholder} {...register(name)}>
+          {children}
+        </select>
       </Container>
     </div>
   );
 };
 
-export default Input;
+export default Select;

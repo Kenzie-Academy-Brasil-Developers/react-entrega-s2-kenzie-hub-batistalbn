@@ -9,6 +9,7 @@ export const Label = styled.div`
     css`
       color: #c53030;
     `}
+
   label {
     padding: 0px;
   }
@@ -27,7 +28,7 @@ export const Container = styled.div`
       border-color: #c53030;
     `}
 
-  input {
+  select {
     margin: 0;
     padding: 0px;
     font-size: 16px;
