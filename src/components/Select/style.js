@@ -1,4 +1,19 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+export const Label = styled.div`
+  text-align: left;
+  padding-left: 10px;
+
+  ${(props) =>
+    props.isErrored &&
+    css`
+      color: #c53030;
+    `}
+
+  label {
+    padding: 0px;
+  }
+`;
 
 export const Container = styled.div`
   border-radius: 8px;
@@ -7,9 +22,15 @@ export const Container = styled.div`
   border: 2px solid #d3d3d3;
   margin-bottom: 15px;
 
+  ${(props) =>
+    props.isErrored &&
+    css`
+      border-color: #c53030;
+    `}
+
   select {
     margin: 0;
-    padding: 5px;
+    padding: 0px;
     font-size: 16px;
     width: 100%;
     border: none;

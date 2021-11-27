@@ -1,10 +1,18 @@
-import { Container } from "./style";
+import { Container, Label } from "./style";
 
-const Select = ({ children }) => {
+const Select = ({ children, label, register, name, error, placeholder }) => {
   return (
-    <Container>
-      <select>{children}</select>
-    </Container>
+    <div>
+      <Label isErrored={!!error}>
+        <label>{label}</label>
+        {!!error && <span> - {error}</span>}
+      </Label>
+      <Container isErrored={!!error}>
+        <select placeholder={placeholder} {...register(name)}>
+          {children}
+        </select>
+      </Container>
+    </div>
   );
 };
 
